@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchise Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="join-nav">
+        <nav class="navbar">
+        <h1 class="company">ATM</h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-about">
+                <a href="about.html">About Us <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+                <ul class="nav-dropdown">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="advantage.html">PixelPay Advantage</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </li>
+            <li><a href="atm.html">Our ATM's</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li class="active"><a href="franchise.html">Become Franchise</a></li>
+            <button class="join"><a href="join.html">Join Us</a></button>
+            <img src="search.png" alt="search">
+        </ul>
+    </nav>
+    </header>
+
+    <a class="franchise-side-apply" href="apply.html" data-open-franchise-apply aria-label="Apply now quick form">
+        <span class="franchise-side-apply__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M7 3h7l5 5v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8.5 13.5h7M8.5 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span class="franchise-side-apply__main">APPLY NOW</span>
+        <span class="franchise-side-apply__divider" aria-hidden="true"></span>
+        <span class="franchise-side-apply__sub">Quick Form</span>
+    </a>
+
+    <div class="franchise-apply-drawer" id="franchise-apply-drawer" aria-hidden="true">
+        <button type="button" class="franchise-apply-drawer__overlay" data-close-franchise-apply aria-label="Close apply form"></button>
+        <aside class="franchise-apply-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="franchise-apply-title">
+            <header class="franchise-apply-drawer__head">
+                <div>
+                    <h2 id="franchise-apply-title"><span aria-hidden="true">&#128196;</span> Apply Now</h2>
+                    <p>Become an ATM Franchise Partner</p>
+                </div>
+                <button type="button" class="franchise-apply-drawer__close" data-close-franchise-apply aria-label="Close form">&#10005;</button>
+            </header>
+
+            <div class="franchise-apply-drawer__body">
+                <div class="franchise-apply-drawer__note">
+                    <strong>Quick &amp; Easy:</strong> Fill out this form and our team will contact you within 24 hours with complete details.
+                </div>
+
+                <form class="franchise-apply-form" id="franchise-apply-form" novalidate>
+                    <label class="franchise-apply-field">
+                        <span>Full Name *</span>
+                        <input type="text" name="full_name" placeholder="Enter your full name" required>
+                    </label>
+
+                    <label class="franchise-apply-field">
+                        <span>Phone Number *</span>
+                        <input type="tel" name="phone_number" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" required>
+                    </label>
+
+                    <label class="franchise-apply-field">
+                        <span>City *</span>
+                        <input type="text" name="city" placeholder="Enter your city" required>
+                    </label>
+
+                    <label class="franchise-apply-field">
+                        <span>Email Address *</span>
+                        <input type="email" name="email" placeholder="your.email@example.com" required>
+                    </label>
+
+                    <fieldset class="franchise-apply-radio">
+                        <legend>Do you have a space ideal for ATM? *</legend>
+                        <label><input type="radio" name="has_space" value="yes" required> Yes</label>
+                        <label><input type="radio" name="has_space" value="no" required> No</label>
+                    </fieldset>
+
+                    <div class="franchise-apply-security">
+                        <p>Security Verification *</p>
+                        <div class="franchise-apply-security__row">
+                            <span class="franchise-apply-security__equation" id="franchise-security-equation">3 &times; 4 = ?</span>
+                            <input type="text" id="franchise-security-answer" inputmode="numeric" placeholder="Answ" aria-label="Security answer">
+                            <button type="button" id="franchise-security-refresh" aria-label="Refresh security question">&#8635;</button>
+                            <span id="franchise-security-status">Not verified</span>
+                        </div>
+                    </div>
+
+                    <p class="franchise-apply-form__feedback" id="franchise-apply-feedback" aria-live="polite"></p>
+
+                    <button type="submit" class="franchise-apply-form__submit">
+                        <span aria-hidden="true">&#9992;</span>
+                        Submit Application
+                    </button>
+
+                    <small>By submitting this form, you agree to be contacted by our team regarding ATM franchise opportunities.</small>
+                </form>
+            </div>
+
+            <button type="button" class="franchise-apply-drawer__collapse" data-close-franchise-apply>
+                <span aria-hidden="true">&#8249;</span> Collapse Form
+            </button>
+        </aside>
+    </div>
+
+    <section class="franchise-why">
+        <div class="franchise-why__container">
+            <header class="franchise-why__header">
+                <h2>Why Choose <span>ATM Franchise India?</span></h2>
+                <p>With 4+ years of experience across all WLA brands, we provide end-to-end support to ensure your ATM business success in rural India.</p>
+            </header>
+
+            <div class="franchise-cta">
+                <div class="franchise-cta__text">
+                    <h3>Ready to Start Your ATM Business?</h3>
+                    <p>Apply now and our team will contact you within 24 hours.</p>
+                </div>
+                <a class="franchise-cta__button" href="#">
+                    <span class="franchise-cta__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M7 3h7l5 5v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M8.5 13.5h7M8.5 17h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    Apply Now
+                </a>
+            </div>
+
+            <div class="franchise-grid">
+                <article class="franchise-card">
+                    <div class="franchise-card__icon">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                        </svg>
+                    </div>
+                    <span class="franchise-card__badge">1</span>
+                    <h3>Trusted ATM Franchise Information</h3>
+                    <p>Get accurate, verified insights into the regulated ATM industry. Our experts cut through misinformation to provide fact-based guidance for informed franchise decisions.</p>
+                    <ul class="franchise-card__list">
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>RBI compliance verification</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Transparent business model analysis</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Risk assessment and mitigation</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Legal documentation support</li>
+                    </ul>
+                    <a class="franchise-card__link" href="#">Get Verified Info <span aria-hidden="true">?</span></a>
+                </article>
+
+                <article class="franchise-card">
+                    <div class="franchise-card__icon">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M7 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm10 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M3.5 19a4.5 4.5 0 0 1 9 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M11.5 19a4.5 4.5 0 0 1 9 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="franchise-card__badge">2</span>
+                    <h3>Expert WLA Operator Guidance</h3>
+                    <p>Choose the right White Label ATM partner with confidence. We provide unbiased comparisons of major operators, highlighting strengths and weaknesses.</p>
+                    <ul class="franchise-card__list">
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Operator comparison reports</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Revenue sharing analysis</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Technical support evaluation</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Contract negotiation assistance</li>
+                    </ul>
+                    <a class="franchise-card__link" href="#">Compare Operators <span aria-hidden="true">?</span></a>
+                </article>
+
+                <article class="franchise-card">
+                    <div class="franchise-card__icon">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M4 16l6-6 4 4 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 6h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="franchise-card__badge">3</span>
+                    <h3>Digital Presence Boost</h3>
+                    <p>Already running an ATM franchise? Enhance your online visibility and connect with more customers through our digital marketing services.</p>
+                    <ul class="franchise-card__list">
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Online branding development</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Local SEO optimization</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Customer acquisition strategies</li>
+                        <li><span class="franchise-card__check" aria-hidden="true"></span>Performance analytics</li>
+                    </ul>
+                    <a class="franchise-card__link" href="#">Boost Visibility <span aria-hidden="true">?</span></a>
+                </article>
+            </div>
+        <div class="franchise-support__container">
+            <div class="franchise-support__panel">
+                <div class="franchise-support__content">
+                    <h2>Complete Franchise Support</h2>
+                    <p>From initial setup to ongoing operations, we handle everything so you can focus on growing your passive income from your ATM business.</p>
+
+                    <ul class="franchise-support__list">
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>Franchise onboarding & setup</li>
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>Local marketing & promotions</li>
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>Bank settlement assistance</li>
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>Comprehensive training programs</li>
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>24/7 technical support</li>
+                        <li><span class="franchise-support__check" aria-hidden="true"></span>Ongoing business consultation</li>
+                    </ul>
+                </div>
+
+                <div class="franchise-support__card">
+                    <h3>Ready to Start?</h3>
+                    <p>Join our network of successful ATM franchise owners across rural India</p>
+                    <div class="franchise-support__stat">350+</div>
+                    <span class="franchise-support__label">Happy Franchisees</span>
+                    <a class="franchise-support__button" href="#">Start Your Journey <span aria-hidden="true">?</span></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="partners__container">
+            <div class="partners__badge">RBI Licensed</div>
+            <h2>Our WLA Partners</h2>
+            <p>Partner with trusted and RBI licensed White Label ATM operators</p>
+
+            <div class="partners__grid">
+                <div class="partner-card">
+                    <span class="partner-logo">eps BANCS</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-logo">FINDI</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-logo">India1</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-logo">Vakrangee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="franchise-models">
+        <div class="franchise-models__container">
+            <h2>Franchise Models Comparison</h2>
+            <p class="franchise-models__subtitle">Choose the franchise model that best fits your investment capacity and business goals</p>
+
+            <div class="franchise-models__tabs">
+                <button class="model-tab active" data-model="premium">
+                    <span class="model-tab__title">ATM Franchise</span>
+                    <span class="model-tab__badge">Most Popular</span>
+                    <span class="model-tab__note">Best Returns</span>
+                </button>
+                <button class="model-tab" data-model="excellent">Excellent Returns</button>
+                <button class="model-tab" data-model="bancs">eps BANCS</button>
+                <button class="model-tab" data-model="india1">India1</button>
+                <button class="model-tab" data-model="findi">FINDI</button>
+                <button class="model-tab" data-model="vakrangee">Vakrangee</button>
+            </div>
+
+            <div class="franchise-models__ribbon" id="models-ribbon">★ MOST POPULAR PLAN - BEST RETURNS WITH ZERO HASSLE ★</div>
+
+            <div class="franchise-models__card">
+                <div class="franchise-models__card-head">
+                    <div class="franchise-models__logo" id="models-logo">ATM Franchise India</div>
+                    <span class="franchise-models__pill" id="models-pill">Most Popular - Best Returns</span>
+                    <p id="models-desc">Our premium fully managed model where we handle everything - from cash management to maintenance. The complete ATM asset, cash inside the ATM, and cash in transit are all fully insured and covered by the company. Just invest and earn guaranteed returns with complete peace of mind.</p>
+                </div>
+
+                <div class="franchise-models__grid">
+                    <div class="models-panel">
+                        <h3>Investment Details</h3>
+                        <div class="models-row">
+                            <span>One-Time Cost</span>
+                            <strong id="inv-cost">₹0</strong>
+                        </div>
+                        <div class="models-row">
+                            <span>Refundable Deposit</span>
+                            <strong id="inv-deposit">₹7,00,000</strong>
+                        </div>
+                        <div class="models-row">
+                            <span>CLF (Working Capital)</span>
+                            <strong id="inv-clf">₹0</strong>
+                        </div>
+                    </div>
+
+                    <div class="models-panel">
+                        <h3>Revenue Streams</h3>
+                        <div class="models-row accent">
+                            <span>Cash Transaction</span>
+                            <strong id="rev-cash">22.28% Annual ROI</strong>
+                        </div>
+                        <div class="models-row accent">
+                            <span>Non-Cash Transaction</span>
+                            <strong id="rev-noncash">Zero hassle</strong>
+                        </div>
+                        <div class="models-row accent">
+                            <span>Ad Revenue Share</span>
+                            <strong id="rev-ad">Fully managed</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="franchise-models__features">
+                    <h4>Key Features</h4>
+                    <div class="features-grid">
+                        <div class="feature-item" id="feature-1">100% Hands-free operation - zero day-to-day involvement</div>
+                        <div class="feature-item" id="feature-2">Company manages all cash loading operations</div>
+                        <div class="feature-item" id="feature-3">Complete ATM asset is fully insured by company</div>
+                        <div class="feature-item" id="feature-4">Cash inside ATM fully covered by company</div>
+                        <div class="feature-item" id="feature-5">Cash in transit fully insured by company</div>
+                        <div class="feature-item" id="feature-6">Guaranteed 22.28% annual return on investment</div>
+                        <div class="feature-item" id="feature-7">Fully refundable ₹7 lakh deposit</div>
+                        <div class="feature-item" id="feature-8">Complete maintenance & technical support included</div>
+                    </div>
+                </div>
+
+                <div class="franchise-models__cta">
+                    <p><strong id="cta-title">Interested in ATM Franchise India - Premium?</strong></p>
+                    <span id="cta-subtitle">Get detailed information and start your franchise application</span>
+                    <a href="#" class="franchise-models__button" id="cta-button">Get Started with ATM Franchise India - Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-section__container">
+            <span class="faq-section__badge">Frequently Asked Questions</span>
+            <h2>Everything You Need to Know</h2>
+            <p>Get answers to the most common questions about starting your ATM franchise business.</p>
+
+            <div class="faq-list">
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1">
+                        <span>What is the investment for an ATM franchise?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-1">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2">
+                        <span>Who are your ATM partners in India?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-2">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3">
+                        <span>Why choose ATM Franchise India?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-3">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-4">
+                        <span>How much can I earn from an ATM franchise?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-4">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-5">
+                        <span>What is the payback period for investment?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-5">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-6">
+                        <span>Are there any hidden costs in ATM franchise?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-6">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-7">
+                        <span>What franchise models do you offer?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-7">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-8">
+                        <span>Do I need technical knowledge to run an ATM franchise?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-8">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-9">
+                        <span>Who manages ATM cash loading and maintenance?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-9">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-10">
+                        <span>Is the deposit refundable after contract completion?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-10">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-11">
+                        <span>How long does setup and installation usually take?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-11">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-12">
+                        <span>Do you help with location and site selection?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-12">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-13">
+                        <span>Is insurance included for ATM and transit cash?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-13">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-14">
+                        <span>What support do I receive after launch?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-14">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-15">
+                        <span>Can I apply online and start quickly?</span>
+                        <span class="faq-icon" aria-hidden="true">&#x2304;</span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-15">
+                        <p>We offer tailor-made franchise models designed for your requirements. Our recommended hands-free model requires a refundable deposit with annual ROI and zero involvement. We also offer owner-operated models with lower capital investment where you manage operations.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+            <div class="footer-col brand">
+            <div class="brand-head">
+                <img src="search.png" alt="ATM Franchise India">
+                <h3>ATM Franchise<br>India</h3>
+            </div>
+            <span class="tagline">Trusted Business Partner</span>
+
+            <p class="desc">
+                Empowering rural entrepreneurs with transparent ATM franchise opportunities.
+                Building passive income streams while serving communities across India.
+            </p>
+
+            <ul class="contact">
+                <li>📞 +91 9072380076</li>
+                <li>✉️ atmfranchise@pixelpay.com</li>
+                <li>📍 Kochi, Kerala, India</li>
+            </ul>
+
+            <div class="socials">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="franchise.html">Submit ATM Location</a></li>
+                <li><a href="franchise.html">Become Franchise</a></li>
+                <li><a href="atm.html">Our ATMs</a></li>
+                <li><a href="sahasra.html">Influencer Program</a></li>
+            </ul>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>ATM Franchise Consultation</li>
+                <li>WLA Operator Comparison</li>
+                <li>Site Evaluation</li>
+                <li>Training & Support</li>
+                <li>Digital Marketing</li>
+                <li>Technical Assistance</li>
+            </ul>
+            </div>
+
+            <!-- COLUMN 4 -->
+            <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Refund Policy</li>
+                <li>Accessibility Statement</li>
+            </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ATM Franchise India. All rights reserved. | RBI Licensed Partners Only</p>
+            <div class="bottom-links">
+            <span>About Us</span>
+            <span>Contact Us</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const modelData = {
+            premium: {
+                ribbon: "★ MOST POPULAR PLAN - BEST RETURNS WITH ZERO HASSLE ★",
+                logo: "ATM Franchise India",
+                pill: "Most Popular - Best Returns",
+                desc: "Our premium fully managed model where we handle everything - from cash management to maintenance. The complete ATM asset, cash inside the ATM, and cash in transit are all fully insured and covered by the company. Just invest and earn guaranteed returns with complete peace of mind.",
+                investment: ["₹0", "₹7,00,000", "₹0"],
+                revenue: ["22.28% Annual ROI", "Zero hassle", "Fully managed"],
+                features: [
+                    "100% Hands-free operation - zero day-to-day involvement",
+                    "Company manages all cash loading operations",
+                    "Complete ATM asset is fully insured by company",
+                    "Cash inside ATM fully covered by company",
+                    "Cash in transit fully insured by company",
+                    "Guaranteed 22.28% annual return on investment",
+                    "Fully refundable ₹7 lakh deposit",
+                    "Complete maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in ATM Franchise India - Premium?",
+                ctaSubtitle: "Get detailed information and start your franchise application",
+                ctaButton: "Get Started with ATM Franchise India - Premium"
+            },
+            excellent: {
+                ribbon: "★ EXCELLENT RETURNS WITH MINIMAL INVOLVEMENT ★",
+                logo: "Excellent Returns Plan",
+                pill: "Excellent Returns",
+                desc: "A balanced model that offers strong returns with shared responsibilities. Ideal for operators who want guidance while keeping some control.",
+                investment: ["₹50,000", "₹5,00,000", "₹20,000"],
+                revenue: ["19.5% Annual ROI", "Shared ops", "Partially managed"],
+                features: [
+                    "Assisted operations with clear guidance",
+                    "Scheduled cash loading support",
+                    "ATM asset insured by company",
+                    "Cash inside ATM partially covered",
+                    "Cash in transit covered with limits",
+                    "Guaranteed 19.5% annual return",
+                    "Refundable ₹5 lakh deposit",
+                    "Maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in Excellent Returns?",
+                ctaSubtitle: "Get plan details and start your application",
+                ctaButton: "Get Started with Excellent Returns"
+            },
+            bancs: {
+                ribbon: "★ BANCS OPERATOR MODEL ★",
+                logo: "eps BANCS Model",
+                pill: "Operator Partner",
+                desc: "A partner-driven model with operator support and structured revenue share. Suitable for semi-managed operations.",
+                investment: ["₹25,000", "₹4,50,000", "₹15,000"],
+                revenue: ["17.2% Annual ROI", "Shared ops", "Managed by operator"],
+                features: [
+                    "Operator-assisted day-to-day operations",
+                    "Cash loading on scheduled cycles",
+                    "ATM asset insured by operator",
+                    "Cash inside ATM covered with limits",
+                    "Cash in transit covered by operator",
+                    "Guaranteed 17.2% annual return",
+                    "Refundable ₹4.5 lakh deposit",
+                    "Maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in eps BANCS?",
+                ctaSubtitle: "Get detailed information and start your application",
+                ctaButton: "Get Started with eps BANCS"
+            },
+            india1: {
+                ribbon: "★ INDIA1 OPERATOR PLAN ★",
+                logo: "India1 Model",
+                pill: "Stable Returns",
+                desc: "A stable returns model with operator expertise and simplified management for steady income.",
+                investment: ["₹20,000", "₹4,00,000", "₹10,000"],
+                revenue: ["16.8% Annual ROI", "Simplified ops", "Managed by operator"],
+                features: [
+                    "Simplified operations with operator support",
+                    "Cash loading support included",
+                    "ATM asset insured by operator",
+                    "Cash inside ATM covered by operator",
+                    "Cash in transit insured by operator",
+                    "Guaranteed 16.8% annual return",
+                    "Refundable ₹4 lakh deposit",
+                    "Maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in India1?",
+                ctaSubtitle: "Get detailed information and start your application",
+                ctaButton: "Get Started with India1"
+            },
+            findi: {
+                ribbon: "★ FINDI PARTNER MODEL ★",
+                logo: "FINDI Model",
+                pill: "Partner Managed",
+                desc: "A partner-managed model focused on simplified operations and predictable returns.",
+                investment: ["₹15,000", "₹3,50,000", "₹10,000"],
+                revenue: ["15.4% Annual ROI", "Managed ops", "Fully assisted"],
+                features: [
+                    "Fully assisted operations",
+                    "Scheduled cash loading support",
+                    "ATM asset insured by partner",
+                    "Cash inside ATM insured by partner",
+                    "Cash in transit insured by partner",
+                    "Guaranteed 15.4% annual return",
+                    "Refundable ₹3.5 lakh deposit",
+                    "Maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in FINDI?",
+                ctaSubtitle: "Get detailed information and start your application",
+                ctaButton: "Get Started with FINDI"
+            },
+            vakrangee: {
+                ribbon: "★ VAKRANGEE MODEL ★",
+                logo: "Vakrangee Model",
+                pill: "Partner Managed",
+                desc: "A partner model with managed operations and consistent returns for long-term stability.",
+                investment: ["₹10,000", "₹3,00,000", "₹8,000"],
+                revenue: ["14.8% Annual ROI", "Managed ops", "Fully assisted"],
+                features: [
+                    "Managed operations with partner support",
+                    "Cash loading assistance included",
+                    "ATM asset insured by partner",
+                    "Cash inside ATM covered by partner",
+                    "Cash in transit covered by partner",
+                    "Guaranteed 14.8% annual return",
+                    "Refundable ₹3 lakh deposit",
+                    "Maintenance & technical support included"
+                ],
+                ctaTitle: "Interested in Vakrangee?",
+                ctaSubtitle: "Get detailed information and start your application",
+                ctaButton: "Get Started with Vakrangee"
+            }
+        };
+
+        const tabs = document.querySelectorAll(".model-tab");
+        const setText = (id, text) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        };
+
+        const setModel = (key) => {
+            const data = modelData[key];
+            if (!data) return;
+            setText("models-ribbon", data.ribbon);
+            setText("models-logo", data.logo);
+            setText("models-pill", data.pill);
+            setText("models-desc", data.desc);
+            setText("inv-cost", data.investment[0]);
+            setText("inv-deposit", data.investment[1]);
+            setText("inv-clf", data.investment[2]);
+            setText("rev-cash", data.revenue[0]);
+            setText("rev-noncash", data.revenue[1]);
+            setText("rev-ad", data.revenue[2]);
+            data.features.forEach((text, i) => setText(`feature-${i + 1}`, text));
+            setText("cta-title", data.ctaTitle);
+            setText("cta-subtitle", data.ctaSubtitle);
+            setText("cta-button", data.ctaButton);
+        };
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                tabs.forEach((t) => t.classList.remove("active"));
+                tab.classList.add("active");
+                setModel(tab.dataset.model);
+            });
+        });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        const closeFaqItem = (item) => {
+            const trigger = item.querySelector(".faq-trigger");
+            const panel = item.querySelector(".faq-panel");
+            item.classList.remove("is-open");
+            trigger.setAttribute("aria-expanded", "false");
+            panel.style.maxHeight = "0px";
+        };
+
+        const openFaqItem = (item) => {
+            const trigger = item.querySelector(".faq-trigger");
+            const panel = item.querySelector(".faq-panel");
+            item.classList.add("is-open");
+            trigger.setAttribute("aria-expanded", "true");
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        };
+
+        faqItems.forEach((item) => {
+            const trigger = item.querySelector(".faq-trigger");
+            trigger.addEventListener("click", () => {
+                const isOpen = item.classList.contains("is-open");
+                faqItems.forEach((entry) => closeFaqItem(entry));
+                if (!isOpen) openFaqItem(item);
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            const openItem = document.querySelector(".faq-item.is-open");
+            if (!openItem) return;
+            const panel = openItem.querySelector(".faq-panel");
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        });
+
+        (() => {
+            const drawer = document.getElementById("franchise-apply-drawer");
+            if (!drawer) return;
+
+            const openButtons = document.querySelectorAll("[data-open-franchise-apply]");
+            const closeButtons = drawer.querySelectorAll("[data-close-franchise-apply]");
+            const form = document.getElementById("franchise-apply-form");
+            const feedback = document.getElementById("franchise-apply-feedback");
+            const equation = document.getElementById("franchise-security-equation");
+            const answerInput = document.getElementById("franchise-security-answer");
+            const refreshButton = document.getElementById("franchise-security-refresh");
+            const status = document.getElementById("franchise-security-status");
+            const firstField = form ? form.querySelector("input[name='full_name']") : null;
+
+            let expectedAnswer = null;
+            let isVerified = false;
+
+            const setVerificationState = (verified) => {
+                isVerified = verified;
+                status.textContent = verified ? "Verified" : "Not verified";
+                status.classList.toggle("is-verified", verified);
+                status.classList.toggle("is-unverified", !verified);
+            };
+
+            const generateQuestion = () => {
+                const a = Math.floor(Math.random() * 8) + 2;
+                const b = Math.floor(Math.random() * 8) + 2;
+                expectedAnswer = a * b;
+                equation.innerHTML = `${a} &times; ${b} = ?`;
+                answerInput.value = "";
+                setVerificationState(false);
+            };
+
+            const checkVerification = () => {
+                const value = Number(answerInput.value.trim());
+                const valid = Number.isFinite(value) && value === expectedAnswer;
+                setVerificationState(valid);
+                return valid;
+            };
+
+            const openDrawer = () => {
+                drawer.classList.add("is-open");
+                drawer.setAttribute("aria-hidden", "false");
+                document.body.classList.add("franchise-apply-open");
+                if (feedback) {
+                    feedback.textContent = "";
+                    feedback.classList.remove("is-error", "is-success");
+                }
+                setTimeout(() => {
+                    if (firstField) firstField.focus();
+                }, 80);
+            };
+
+            const closeDrawer = () => {
+                drawer.classList.remove("is-open");
+                drawer.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("franchise-apply-open");
+            };
+
+            openButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    openDrawer();
+                });
+            });
+
+            closeButtons.forEach((button) => {
+                button.addEventListener("click", closeDrawer);
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+                    closeDrawer();
+                }
+            });
+
+            refreshButton.addEventListener("click", generateQuestion);
+            answerInput.addEventListener("input", () => {
+                const value = answerInput.value;
+                answerInput.value = value.replace(/[^0-9]/g, "");
+                if (answerInput.value.length) {
+                    checkVerification();
+                } else {
+                    setVerificationState(false);
+                }
+            });
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                if (!checkVerification()) {
+                    feedback.textContent = "Please complete security verification correctly.";
+                    feedback.classList.remove("is-success");
+                    feedback.classList.add("is-error");
+                    answerInput.focus();
+                    return;
+                }
+
+                feedback.textContent = "Application submitted successfully. Our team will contact you soon.";
+                feedback.classList.remove("is-error");
+                feedback.classList.add("is-success");
+                form.reset();
+                generateQuestion();
+
+                setTimeout(() => {
+                    closeDrawer();
+                }, 900);
+            });
+
+            generateQuestion();
+        })();
+    </script>
+    <script src="site-search.js" defer></script>
+    <script src="navbar.js" defer></script>
+</body>
+</html>
+
+
+
+
+

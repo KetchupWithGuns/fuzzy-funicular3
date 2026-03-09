@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM franchise india</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="join-nav">
+        <nav class="navbar">
+        <h1 class="company">ATM</h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-about">
+                <a href="about.html">About Us <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+                <ul class="nav-dropdown">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="advantage.html">PixelPay Advantage</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </li>
+            <li class="active"><a href="atm.html">Our ATM's</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="franchise.html">Become Franchise</a></li>
+            <button class="join"><a href="join.html">Join Us</a></button>
+            <img src="search.png" alt="search">
+        </ul>
+    </nav>
+    </header>
+
+    <section class="atm-network">
+  <h1>Our ATM Network</h1>
+  <p class="subtitle">
+    Explore our growing network of 380+ ATMs across 15 states in India
+  </p>
+
+  <div class="atm-card">
+    <div class="atm-card-header">
+      <span>📍 ATM Distribution Across India</span>
+      <small>Hover over states to see ATM counts</small>
+    </div>
+
+    <div class="atm-card-body">
+      <!-- MAP AREA -->
+      <div class="map-area">
+        <div class="map-placeholder">
+          <span>India Map Here</span>
+        </div>
+
+        <div class="map-legend">
+          <span class="l red">100+ ATMs</span>
+          <span class="l orange">20–99 ATMs</span>
+          <span class="l green">5–19 ATMs</span>
+          <span class="l blue">1–4 ATMs</span>
+          <span class="l gray">No ATMs yet</span>
+        </div>
+      </div>
+
+      <!-- STATS PANEL -->
+      <div class="stats-panel">
+        <div class="total-box">
+          <p>Total Network</p>
+          <h2>380+</h2>
+          <span>ATMs Across 15 States</span>
+        </div>
+
+        <div class="top-states">
+          <h4>Top States</h4>
+          <ul>
+            <li><span>Kerala</span><b>261</b></li>
+            <li><span>Maharashtra</span><b>32</b></li>
+            <li><span>Telangana</span><b>15</b></li>
+            <li><span>Bihar</span><b>14</b></li>
+            <li><span>Madhya Pradesh</span><b>10</b></li>
+            <li><span>Karnataka</span><b>9</b></li>
+            <li><span>Rajasthan</span><b>8</b></li>
+            <li><span>Tamil Nadu</span><b>9</b></li>
+            <li><span>Delhi</span><b>5</b></li>
+            <li><span>Gujarat</span><b>6</b></li>
+            <li><span>Uttar Pradesh</span><b>4</b></li>
+            <li><span>Andhra Pradesh</span><b>3</b></li>
+            <li><span>Chhattisgarh</span><b>1</b></li>
+            <li><span>Jharkhand</span><b>2</b></li>
+            <li><span>West Bengal</span><b>1</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="installations">
+      <div class="installations-card">
+
+        <!-- HEADER -->
+        <div class="installations-header">
+          <h2>📷 Our ATM Installations</h2>
+          <p>Real photos from our franchise partner locations across India</p>
+        </div>
+
+        <!-- GALLERY -->
+        <div class="installations-grid">
+
+          <div class="install-card">
+            <img src="atm1.jpg" alt="">
+            <div class="caption">
+              24/7 ATM Kiosk – All Bank Cards Accepted
+            </div>
+          </div>
+
+          <div class="install-card">
+            <img src="atm2.jpg" alt="">
+            <div class="caption">
+              EPS BANCS ATM with Authorization Certificate
+            </div>
+          </div>
+
+          <div class="install-card">
+            <img src="atm3.jpg" alt="">
+            <div class="caption">
+              EPS BANCS ATM Franchise Location
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="atm-directory">
+      <!-- Search Row -->
+      <div class="search-row">
+        <div class="search-box">
+          🔍
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by ATM ID, City, Pin Code, or Address..."
+          />
+        </div>
+
+        <select class="state-filter">
+          <option>All States</option>
+          <option>Andhra Pradesh</option>
+          <option>Bihar</option>
+        </select>
+      </div>
+
+      <!-- Card -->
+      <div class="directory-card">
+        <h3>📍 ATM Locations Directory</h3>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>ATM ID</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Pin Code</th>
+                <th>Location Type</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>6</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>7</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>8</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>9</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>11</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>12</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>13</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>14</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+
+              <tr>
+                <td>15</td>
+                <td>EBA000063</td>
+                <td>Visakhapatnam</td>
+                <td>Andhra Pradesh</td>
+                <td>530012</td>
+                <td><span class="pill suburban">S-Urban</span></td>
+                <td>
+                  Shop No: 5-8-36, Main Road, Thungalam, Visakhapatnam, Andhra Pradesh
+                </td>
+              </tr>
+
+              <tr>
+                <td>16</td>
+                <td>EBA000187</td>
+                <td>Santapeta</td>
+                <td>Andhra Pradesh</td>
+                <td>524001</td>
+                <td><span class="pill urban">Urban</span></td>
+                <td>
+                  11/6888, Nera Simhapuri Furniture, Santapeta, Nellore 524001
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h2>Ready to Join Our Growing Network?</h2>
+        <p>
+          Be part of India’s fastest growing ATM franchise network with 350+ ATMs
+          across 15 states.
+        </p>
+        <button><a href="franchise.html">Start Yours Now</a></button>
+      </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+            <div class="footer-col brand">
+            <div class="brand-head">
+                <img src="search.png" alt="ATM Franchise India">
+                <h3>ATM Franchise<br>India</h3>
+            </div>
+            <span class="tagline">Trusted Business Partner</span>
+
+            <p class="desc">
+                Empowering rural entrepreneurs with transparent ATM franchise opportunities.
+                Building passive income streams while serving communities across India.
+            </p>
+
+            <ul class="contact">
+                <li>📞 +91 9072380076</li>
+                <li>✉️ atmfranchise@pixelpay.com</li>
+                <li>📍 Kochi, Kerala, India</li>
+            </ul>
+
+            <div class="socials">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="franchise.html">Submit ATM Location</a></li>
+                <li><a href="franchise.html">Become Franchise</a></li>
+                <li><a href="atm.html">Our ATMs</a></li>
+                <li><a href="sahasra.html">Influencer Program</a></li>
+            </ul>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>ATM Franchise Consultation</li>
+                <li>WLA Operator Comparison</li>
+                <li>Site Evaluation</li>
+                <li>Training & Support</li>
+                <li>Digital Marketing</li>
+                <li>Technical Assistance</li>
+            </ul>
+            </div>
+
+            <!-- COLUMN 4 -->
+            <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Refund Policy</li>
+                <li>Accessibility Statement</li>
+            </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ATM Franchise India. All rights reserved. | RBI Licensed Partners Only</p>
+            <div class="bottom-links">
+            <span>About Us</span>
+            <span>Contact Us</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const tableRows = document.querySelectorAll("tbody tr");
+
+      searchInput.addEventListener("keyup", () => {
+        const searchValue = searchInput.value.toLowerCase();
+
+        tableRows.forEach(row => {
+          const rowText = row.innerText.toLowerCase();
+
+          if (rowText.includes(searchValue)) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <script src="site-search.js" defer></script>
+    <script src="navbar.js" defer></script>
+</body>
+</html>
+
+
+
+
+
